@@ -45,21 +45,31 @@
             purpose (injected humour and the like).</p>
 
 
-        <button>Entrar em Contato</button>
-
+        <button onclick="abrir()">Entrar em Contato</button>
     </div>
 
 
-
-    <form action="https://formsubmit.co/your@email.com" method="POST">
+    <form action="https://formsubmit.co/moniquelima19@hotmail.com" method="POST">
         <input type="text" name="name" required placeholder="Nome">
         <input type="email" name="email" required placeholder="Email">
-        <textarea placeholder="Sua Dúvida aqui"></textarea>
+        <textarea type= "text" name= "duvida" placeholder="Sua Dúvida aqui"></textarea>
         <button type="submit">ENVIAR</button>
-        <button type="button" class="voltar">Voltar</button>
+        <button onclick="fechar()" type="button" class="voltar">Voltar</button>
     </form>
 
 
 </body>
+
+<script>
+    function abrir() {
+        document.querySelector("form").style.opacity = 1
+        document.querySelector("div").style.opacity = 0.2
+    }
+
+    function fechar() {
+        document.querySelector("form").style.opacity = 0
+        document.querySelector("div").style.opacity = 1
+    }
+</script>
 
 </html>
